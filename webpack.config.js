@@ -18,9 +18,9 @@ module.exports = {
       // {
       //   test:/\.js/,
       //   use:{
-      //     path: './loader/loader1.js',
+      //     loader: './loader/loader1.js',
       //     options:{
-      //       name:'nordon'
+      //       name:'新的信息'
       //     }
       //   }
       // }
@@ -28,9 +28,9 @@ module.exports = {
   },
   plugins:[
     new HelloWordPlugin(),
-    // new HTMLPlugin({
-    //   filename: 'index.html',
-    //   template: './src/index.html'
-    // })
+    new HTMLPlugin({
+      filename: 'index.html',
+      template: './src/index.html'
+    })
   ]
 }

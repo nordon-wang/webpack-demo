@@ -1,3 +1,3 @@
-const news = require('./news.js')
+const parent = require('./parent.js')
 
-console.log(news.content)
+console.log(parent)

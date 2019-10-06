@@ -1,5 +1,5 @@
-(function (modules) { // webpackBootstrap
-  // The module cache
+(function (modules) { 
+  // 我自己的webpack打包
   var installedModules = {};
 
   // The require function
@@ -106,24 +106,25 @@
   
   "./src/index.js": (function (module, exports, __webpack_require__) {
 
-    eval(`const news = __webpack_require__("./src/news.js");
+    eval(`const parent = __webpack_require__("./src/parent.js");
 
-console.log(news.content);`);
+console.log(parent);`);
   }),
   
-  "./src/news.js": (function (module, exports, __webpack_require__) {
+  "./src/parent.js": (function (module, exports, __webpack_require__) {
 
-    eval(`const msg = __webpack_require__("./src/msg.js");
+    eval(`const child = __webpack_require__("./src/child.js");
 
 module.exports = {
-  content: 'nordon' + msg.content
+  msg: '我是parent的默认的信息',
+  child: child.msg
 };`);
   }),
   
-  "./src/msg.js": (function (module, exports, __webpack_require__) {
+  "./src/child.js": (function (module, exports, __webpack_require__) {
 
     eval(`module.exports = {
-  content: 'www'
+  msg: '我是child的默认的信息'
 };`);
   }),
   
